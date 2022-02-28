@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { Canvas } from '@react-three/fiber';
 import './App.css';
 
 function App() {
+
+  const styles = {
+    canvasContainer: {
+      border: '5px solid gold'
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id='canvas-container' style={styles.canvasContainer}>
+        <Canvas>
+          <mesh />
+        </Canvas>
+      </div>
     </div>
   );
 }
 
 export default App;
+
